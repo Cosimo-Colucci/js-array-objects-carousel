@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.main-content{
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+div.main-content img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+div.previous-button,
+div.next-button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    display: flex;
+}
+
+
+div.previous-button i,
+div.next-button i{
+    margin: auto;
+}
