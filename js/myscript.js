@@ -29,6 +29,34 @@
  imagesList.forEach(function (imagesList) {
          mainElement.innerHTML +=
              `<div class="main-item">
-        <img src="./img/${imagesList.image}" alt="Slide image">
+        <img src="./${imagesList.image}" alt="Slide image">
     </div>`;
      });
+
+ let activeIndex = 0;
+
+ document.querySelectorAll('div.main-item')[activeIndex].classList.add('active');
+
+const prevButton = document.querySelector('div.previous-button');
+prevButton.addEventListener('click', function(){
+    if (activeIndex == 0 ) {
+        activeIndex = imagesList.length - 1;
+    } else {
+        activeIndex = activeIndex - 1;
+    }
+
+    document.querySelector('div.main-item.active').classList.remove('active');
+    document.querySelectorAll('div.main-item')[activeIndex].classList.add('active');
+});
+
+const nextButton = document.querySelector('div.next-button');
+nextButton.addEventListener('click', function(){
+    if (activeIndex == imagesList.length - 1 ) {
+        activeIndex = 0;
+    } else {
+        activeIndex = activeIndex + 1;
+    }
+
+    document.querySelector('div.main-item.active').classList.remove('active');
+    document.querySelectorAll('div.main-item')[activeIndex].classList.add('active');
+});

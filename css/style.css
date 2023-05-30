@@ -13,31 +13,51 @@ main{
 
 div.main-content{
     position: relative;
-    height: 500px;
+    height: 600px;
     width: 100%;
 }
 
 div.main-content img{
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     display: block;
+    padding: 2rem;
 }
 
 div.previous-button,
 div.next-button{
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     font-size: 1.4rem;
     background-color: white;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     border-radius: 50%;
     display: flex;
+}
+
+div.previous-button{
+    top: 2.2rem;
+}
+
+div.next-button{
+    bottom: 2rem;
 }
 
 
 div.previous-button i,
 div.next-button i{
     margin: auto;
+}
+
+
+div.main-content .main-item{
+    display: none;
+    height: 100%;
+}
+
+div.main-content .main-item.active{
+    display: block;
 }
