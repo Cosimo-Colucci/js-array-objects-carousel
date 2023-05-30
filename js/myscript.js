@@ -25,11 +25,14 @@
 
 
  const mainElement = document.querySelector('div.main-content');
-
  imagesList.forEach(function (imagesList) {
          mainElement.innerHTML +=
-             `<div class="main-item">
+    `<div class="main-item">
         <img src="./${imagesList.image}" alt="Slide image">
+        <div class="info">
+                <h2>${imagesList.title}</h2>
+                <p>${imagesList.text}</p>
+        </div> 
     </div>`;
      });
 
